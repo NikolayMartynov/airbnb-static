@@ -1,9 +1,11 @@
-<div class="padded">
-  <ul class="list-inline text-center">
-    <% ["Clement", "Nikolay"].each do |member| %>
+<div class="text-center padded">
+  <h1>Our team of <%= 2 + 1 %> members</h1>
+  <% team = %w(Seb Romain Anne) %>
+  <ul class="list-inline">
+    <% team.each do |member| %>
       <li>
-        <%= image_tag "#{member}.png", class: "avatar-bordered" %>
-        <h3><%= member.capitalize %></h3>
+        <h2><%= member %></h2>
+        <%= image_tag "#{member.downcase}.jpg", class: "img-circle" %>
       </li>
     <% end %>
   </ul>
